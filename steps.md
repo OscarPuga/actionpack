@@ -25,16 +25,18 @@ edit line for boolean to add default value:
 
 > t.boolean :completed, default: false
 
+```shell
 $ rake db:migrate
 
 $ rspec -e rq02
+```
 
 # Requisite 03:
 
-
+```shell
 $ rake db:seed
 $ rspec -e rq03
-
+```
 
 # Requisite 04:
 
@@ -46,18 +48,32 @@ $ rails s
 
 or in c9: 
 
+```shell
 $ rails s -p $PORT -b $IP 
+```
 
 navigate to [todo_lists home page](http://localhost:3000/todo_items) or [in c9](https://saas-proyects-oscarpuga.c9.io/todo_items)
 
+```shell
 $ rspec -e rq04
-
+```
 
 # Requisite 05:
 
 with the server running, use the new link to crete a TodoItem
 
+```shell
 $ rspec -e rq05
-
+```
 
 # Requisite 06:
+
+redirect to index instead of show. In todo_items_controller.rb
+
+```shell
+  def create
+  ...
+        format.html { redirect_to todo_items_url, notice: 'Todo item was successfully created.' }
+  ...
+  end
+```
