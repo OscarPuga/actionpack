@@ -70,7 +70,7 @@ $ rspec -e rq05
 
 redirect to index instead of show. In todo_items_controller.rb
 
-```shell
+```ruby
   def create
   ...
         format.html { redirect_to todo_items_url, notice: 'Todo item was successfully created.' }
